@@ -52,3 +52,11 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   background-repeat: no-repeat;
 }
 
+#result {
+  width: 200px;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
