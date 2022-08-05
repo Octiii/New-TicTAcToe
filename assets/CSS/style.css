@@ -10,7 +10,7 @@ Removes margins.
 Centers the contents on the page, and sents a background collor.
 */
 body {
-  background-color: lightseagreen;
+  background-color: darkblue;
   height: 100vh;
   display:flex;
   flex-direction: column;

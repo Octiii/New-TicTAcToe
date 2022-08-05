@@ -27,6 +27,24 @@ function placeMarker(index) {
     boardData[row][col] = player;
     //Change player
     player *= -1;
-    console.log(boardData);
+    drawMarkers();
+  }
+}
+
+//Create function for placing markers 
+function drawMarkers() {
+  //Iterates over rows
+  for (let row = 0; row < 3; row++) {
+    //Iterate over colums
+    for (let col = 0; col < 3; col++) {
+      //Cheks if it is player 1 number
+      if (boardData[row][col] == 1) {
+        //Update cell class to add cross
+        cellDiv[(row * 3) + col].classList.add("cross");
+      } else if (boardData[row][col] == -1) {
+        //Update cell class to add circle
+        cellDiv[(row * 3) + col].classList.add("circle");
+      }
+    }
   }
 }
