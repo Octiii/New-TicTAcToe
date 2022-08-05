@@ -33,3 +33,22 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   border-radius: 3rem;
   box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0.5)
 }
+
+.board:hover {
+  cursor: pointer;
+}
+
+.circle {
+  background-image: url(/images/circle.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cross {
+  background-image: url(/images/cross.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
