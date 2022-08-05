@@ -28,7 +28,7 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 2px;
-  background-image: url(grid.png);
+  background-image:url(/images/grid.png);
   background-size: cover;
   border-radius: 3rem;
   box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0.5)
