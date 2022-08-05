@@ -60,3 +60,16 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   text-align: center;
 }
 
+button {
+  background-color: yellowgreen;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 0.7rem 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: green;
+}
