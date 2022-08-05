@@ -20,5 +20,6 @@ function placeMarker(index) {
   //Determine index position
   let col = index % 3
   let row = (index - col) / 3
-  console.log(col, row);
+  boardData[row][col] = 1;
+  console.log(boardData);
 }
