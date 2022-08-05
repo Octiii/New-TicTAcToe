@@ -1,0 +1,35 @@
+/*
+Removes margins.
+*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+/*
+Centers the contents on the page, and sents a background collor.
+*/
+body {
+  background-color: lightseagreen;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; 
+}
+/*
+Sets width and height of the play board, set the divs in a grid and set the grid 
+*/
+.board {
+  width: 320px;
+  height:320px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+  background-image: url(grid.png);
+  background-size: cover;
+  border-radius: 3rem;
+  box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0.5)
+}
