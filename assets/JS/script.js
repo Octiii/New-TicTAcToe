@@ -12,6 +12,9 @@ let gameOver = false;
 
 //Pull cell class divs from DOM.
 const cellDiv = document.querySelectorAll(".cell");
+
+const resultElement = document.getElementById("result");
+
 //Event listner for cells.
 cellDiv.forEach((cell, index) => {
   cell.addEventListener("click", () => {
@@ -94,7 +97,7 @@ function checkResult() {
 //Fucntion to end game and display result
 function endGame(winner) {
   gameOver = true;
-  const resultElement = document.getElementById("result");
+
   //Check if game endedn in a tie 
   if (winner == 0) {
     resultElement.innerText = "Its a Tie!"
@@ -117,5 +120,6 @@ resetButton.addEventListener("click", () => {
   cellDiv.forEach(cell => {
     cell.classList.remove("cross", "circle");
   });
-  //Rset
+  //Reset text
+  resultElement.innerText = ""
 });
