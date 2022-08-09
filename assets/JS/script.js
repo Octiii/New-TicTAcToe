@@ -13,7 +13,12 @@ let gameOver = false;
 //Pull cell class divs from DOM.
 const cellDiv = document.querySelectorAll(".cell");
 
+//Pull result div
 const resultElement = document.getElementById("result");
+
+//Pull scorres divs
+const scorreOElement = document.getElementById("scorreO");
+const scorreXElement = document.getElementById("scorreX");
 
 //Event listner for cells.
 cellDiv.forEach((cell, index) => {
