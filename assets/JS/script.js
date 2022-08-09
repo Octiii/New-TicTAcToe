@@ -27,7 +27,10 @@ function placeMarker(index) {
     boardData[row][col] = player;
     //Change player
     player *= -1;
+    //Updates the board with apropriate simbol
     drawMarkers();
+    //Check if anybody has won 
+    checkResult();
   }
 }
 
@@ -46,5 +49,31 @@ function drawMarkers() {
         cellDiv[(row * 3) + col].classList.add("circle");
       }
     }
+  }
+}
+
+//Result function check
+function checkResult() {
+  //Check rows and colums
+  for (let i = 0; i < 3; i++) {
+    let rowSum = boardData[i][0] + boardData[i][1] + boardData[i][2]
+    let colSum = boardData[0][i] + boardData[1][i] + boardData[2][i]
+    if (rowSum == 3 || colSum == 3) {
+      //Player one wins
+      console.log("Player 1 wins");
+    } //Player two wins
+    else if (rowSum == -3 || colSum == -3) {
+      console.log("player 2 Wins");
+    }
+  }
+  //check diagonals
+  let diagonalSum1 = boardData[0][0] + boardData[1][1] + boardData[2][2];
+  let diagonalSum2 = boardData[0][2] + boardData[1][1] + boardData[2][0];
+  if (diagonalSum1 == 3 || diagonalSum2 == 3) {
+    //Player one wins
+    console.log("Player 1 wins");
+  } //Player two wins
+  else if (diagonalSum1 == -3 || diagonalSum2 == -3) {
+    console.log("player 2 Wins");
   }
 }
