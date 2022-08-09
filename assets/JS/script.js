@@ -17,8 +17,25 @@ const cellDiv = document.querySelectorAll(".cell");
 const resultElement = document.getElementById("result");
 
 //Pull scorres divs
-const scorreOElement = document.getElementById("scorreO");
-const scorreXElement = document.getElementById("scorreX");
+
+
+function incrementScorreO() {
+  var scorreOValue = document.getElementById("scorreO");
+  var actualValue = scorreOValue.innerHTML;
+
+  ++actualValue;
+  console.log(actualValue);
+  document.getElementById("scorreO").innerHTML = actualValue;
+}
+
+function incrementScorreX() {
+  var scorreOValue = document.getElementById("scorreX");
+  var actualValue = scorreOValue.innerHTML;
+
+  ++actualValue;
+  console.log(actualValue);
+  document.getElementById("scorreX").innerHTML = actualValue;
+}
 
 //Event listner for cells.
 cellDiv.forEach((cell, index) => {
@@ -71,9 +88,11 @@ function checkResult() {
     if (rowSum == 3 || colSum == 3) {
       //Player one wins
       endGame(1);
+      incrementScorreX();
       return
     } //Player two wins
     else if (rowSum == -3 || colSum == -3) {
+      incrementScorreO()
       endGame(2);
       return
     }
@@ -84,9 +103,11 @@ function checkResult() {
   if (diagonalSum1 == 3 || diagonalSum2 == 3) {
     //Player one wins
     endGame(1);
+    incrementScorreX();
     return
   } //Player two wins
   else if (diagonalSum1 == -3 || diagonalSum2 == -3) {
+    incrementScorreO()
     endGame(2);
     return
   }

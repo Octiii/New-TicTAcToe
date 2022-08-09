@@ -60,6 +60,30 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   text-align: center;
 }
 
+#scorrecontainer {
+  width: 200px;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+#scorreO {
+  width: 200px;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+#scorreX {
+  width: 200px;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
 button {
   background-color: yellowgreen;
   border: none;
