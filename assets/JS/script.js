@@ -7,6 +7,8 @@ let boardData = [
 
 //Determines whos turn it is 
 let player = 1;
+//Game state
+let gameOver = false;
 
 //Pull cell class divs from DOM.
 const cellDiv = document.querySelectorAll(".cell");
@@ -23,7 +25,7 @@ function placeMarker(index) {
   let col = index % 3
   let row = (index - col) / 3
   //Check if current cell is empty 
-  if (boardData[row][col] == 0) {
+  if (boardData[row][col] == 0 && ) {
     boardData[row][col] = player;
     //Change player
     player *= -1;
@@ -60,10 +62,12 @@ function checkResult() {
     let colSum = boardData[0][i] + boardData[1][i] + boardData[2][i]
     if (rowSum == 3 || colSum == 3) {
       //Player one wins
-      console.log("Player 1 wins");
+      endGame(1);
+      return
     } //Player two wins
     else if (rowSum == -3 || colSum == -3) {
-      console.log("player 2 Wins");
+      endGame(2);
+      return
     }
   }
   //check diagonals
@@ -71,9 +75,29 @@ function checkResult() {
   let diagonalSum2 = boardData[0][2] + boardData[1][1] + boardData[2][0];
   if (diagonalSum1 == 3 || diagonalSum2 == 3) {
     //Player one wins
-    console.log("Player 1 wins");
+    endGame(1);
+    return
   } //Player two wins
   else if (diagonalSum1 == -3 || diagonalSum2 == -3) {
-    console.log("player 2 Wins");
+    endGame(2);
+    return
+  }
+  //Check For a tie.
+  if (boardData[0].indexOf(0) == -1 &&
+    boardData[1].indexOf(0) == -1 &&
+    boardData[2].indexOf(0) == -1) {
+    endGame(0);
+    return
+  }
+}
+
+//Fucntion to end game and display result
+function endGame(winner) {
+  gameOver = true;
+  //check if game ended in a tie 
+  if (winner == 0) {
+    console.log("Tie!");
+  } else {
+    console.log(`Player ${winner} has won!`);
   }
 }
