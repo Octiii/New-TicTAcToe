@@ -25,7 +25,7 @@ function placeMarker(index) {
   let col = index % 3
   let row = (index - col) / 3
   //Check if current cell is empty 
-  if (boardData[row][col] == 0 && ) {
+  if (boardData[row][col] == 0 && gameOver == false) {
     boardData[row][col] = player;
     //Change player
     player *= -1;
@@ -94,10 +94,28 @@ function checkResult() {
 //Fucntion to end game and display result
 function endGame(winner) {
   gameOver = true;
-  //check if game ended in a tie 
+  const resultElement = document.getElementById("result");
+  //Check if game endedn in a tie 
   if (winner == 0) {
-    console.log("Tie!");
+    resultElement.innerText = "Its a Tie!"
   } else {
-    console.log(`Player ${winner} has won!`);
+    resultElement.innerText = `Player ${winner} wins!`
   }
 }
+
+//Restart game
+const resetButton = document.getElementById("reset")
+resetButton.addEventListener("click", () => {
+  boardData = [
+    [0, 0, 0,],
+    [0, 0, 0,],
+    [0, 0, 0,]
+  ];
+  player = 1;
+  gameOver = false;
+  //Reset Game board
+  cellDiv.forEach(cell => {
+    cell.classList.remove("cross", "circle");
+  });
+  //Rset
+});
