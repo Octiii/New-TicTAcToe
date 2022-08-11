@@ -17,7 +17,7 @@ const cellDiv = document.querySelectorAll(".cell");
 const resultElement = document.getElementById("result");
 
 const bloop = new Audio("GoodBloop.mp3");
-const winner = new Audio("fanfare")
+const winner = new Audio("fanfare.mp3")
 
 //Increments 0's scoree
 function incrementScorreO() {
@@ -114,7 +114,7 @@ function checkResult() {
   else if (diagonalSum1 == -3 || diagonalSum2 == -3) {
     incrementScorreO()
     endGame(2);
-    
+
     return
   }
   //Check For a tie.
