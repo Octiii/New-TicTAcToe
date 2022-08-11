@@ -1,14 +1,10 @@
-/*
-Removes margins.
-*/
+/*Removes margins.*/
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
 }
-/*
-Centers the contents on the page, and sents a background collor.
-*/
+/*Centers the contents on the page, and sents a background collor.*/
 body {
   background-color: darkblue;
   height: 100vh;
@@ -18,9 +14,7 @@ body {
   align-items: center;
   gap: 1rem; 
 }
-/*
-Sets width and height of the play board, set the divs in a grid and set the grid 
-*/
+/*Sets width and height of the play board, set the divs in a grid and set the grid.*/
 .board {
   width: 320px;
   height:320px;
@@ -34,24 +28,25 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0.5)
 }
 
+/*Gives a nice visual feed back that the are can be cliked.*/
 .board:hover {
   cursor: pointer;
 }
-
+/*Fits the image nicley into the squares.*/
 .circle {
   background-image: url(/images/circle.png);
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
 }
-
+/* Fits the image nicley into the squares.*/
 .cross {
   background-image: url(/images/cross.png);
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
 }
-
+/* Styles the text.*/
 #result {
   width: 200px;
   height: 2rem;
@@ -59,7 +54,7 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   color: white;
   text-align: center;
 }
-
+/* Styles the text.*/
 #scorrecontainer {
   width: 200px;
   height: 2rem;
@@ -67,7 +62,7 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   color: white;
   text-align: center;
 }
-
+/* Styles the text.*/
 #scorreO {
   width: 200px;
   height: 2rem;
@@ -75,7 +70,7 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   color: white;
   text-align: center;
 }
-
+/* Styles the text.*/
 #scorreX {
   width: 200px;
   height: 2rem;
@@ -83,17 +78,18 @@ Sets width and height of the play board, set the divs in a grid and set the grid
   color: white;
   text-align: center;
 }
-
+/*Styels the reset button*/
 button {
-  background-color: yellowgreen;
+  background-color: orange;
   border: none;
   border-radius: 0.5rem;
   font-family: inherit;
   font-size: 2rem;
   padding: 0.7rem 1rem;
+  color: darkblue;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: green;
+  background-color: yellow;
 }

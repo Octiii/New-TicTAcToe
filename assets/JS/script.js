@@ -16,9 +16,10 @@ const cellDiv = document.querySelectorAll(".cell");
 //Pull result div
 const resultElement = document.getElementById("result");
 
-//Pull scorres divs
+const bloop = new Audio("GoodBloop.mp3");
+const winner = new Audio("fanfare")
 
-
+//Increments 0's scoree
 function incrementScorreO() {
   var scorreOValue = document.getElementById("scorreO");
   var actualValue = scorreOValue.innerHTML;
@@ -27,7 +28,7 @@ function incrementScorreO() {
   console.log(actualValue);
   document.getElementById("scorreO").innerHTML = actualValue;
 }
-
+//Increments X's scoree
 function incrementScorreX() {
   var scorreOValue = document.getElementById("scorreX");
   var actualValue = scorreOValue.innerHTML;
@@ -40,6 +41,7 @@ function incrementScorreX() {
 //Event listner for cells.
 cellDiv.forEach((cell, index) => {
   cell.addEventListener("click", () => {
+    bloop.play();
     placeMarker(index);
   });
 });
@@ -89,11 +91,13 @@ function checkResult() {
       //Player one wins
       endGame(1);
       incrementScorreX();
+      winner.play();
       return
     } //Player two wins
     else if (rowSum == -3 || colSum == -3) {
       incrementScorreO()
       endGame(2);
+      winner.play();
       return
     }
   }
@@ -104,11 +108,13 @@ function checkResult() {
     //Player one wins
     endGame(1);
     incrementScorreX();
+    winner.play();
     return
   } //Player two wins
   else if (diagonalSum1 == -3 || diagonalSum2 == -3) {
     incrementScorreO()
     endGame(2);
+    
     return
   }
   //Check For a tie.
