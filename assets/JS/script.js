@@ -25,7 +25,6 @@ function incrementScorreO() {
   var actualValue = scorreOValue.innerHTML;
 
   ++actualValue;
-  console.log(actualValue);
   document.getElementById("scorreO").innerHTML = actualValue;
 }
 //Increments X's scoree
@@ -34,7 +33,6 @@ function incrementScorreX() {
   var actualValue = scorreOValue.innerHTML;
 
   ++actualValue;
-  console.log(actualValue);
   document.getElementById("scorreX").innerHTML = actualValue;
 }
 
