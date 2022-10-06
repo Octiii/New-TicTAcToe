@@ -17,7 +17,9 @@ const cellDiv = document.querySelectorAll(".cell");
 const resultElement = document.getElementById("result");
 
 const bloop = new Audio("GoodBloop.mp3");
-const winner = new Audio("fanfare.mp3")
+bloop.volume = 0.2;
+const winner = new Audio("fanfare.mp3");
+winner.volume = 0.2;
 
 //Increments 0's scoree
 function incrementScorreO() {
