@@ -141,11 +141,17 @@ function endGame(winner) {
   }
 };
 
+
+
 function whosTurn() {
   if (player == 1) {
     whoGoesNow.innerText = "X's Turn."
+    whoGoesNow.style.color = 'red' 
+    //whoGoesNow.classList.add("red");
   } else if (player == -1) {
     whoGoesNow.innerText = "O's Turn."
+    whoGoesNow.style.color = 'green'
+    //whoGoesNow.classList.add("green");
   }
 };
 
@@ -170,4 +176,5 @@ resetButton.addEventListener("click", () => {
   winner.currentTime = 0;
   //Resets who goes now 
   whoGoesNow.innerText = "X's Turn."
+  whoGoesNow.style.color = 'red'
 });

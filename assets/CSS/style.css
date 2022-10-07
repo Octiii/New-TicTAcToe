@@ -66,9 +66,13 @@ body {
   width: 200px;
   height: 2rem;
   font-size: 1.5rem;
-  color: white;
   text-align: center;
 }
+
+.white {
+  color: white;
+}
+
 /* Styles the text.*/
 #scorrecontainer {
   width: 200px;
@@ -107,4 +111,12 @@ button {
 button:hover {
   cursor: pointer;
   background-color: yellow;
+}
+/*Green!*/ 
+.green {
+  color: green !important; 
+}
+/*Red!*/ 
+.red {
+  color:red !important;
 }
