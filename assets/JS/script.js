@@ -17,9 +17,9 @@ const cellDiv = document.querySelectorAll(".cell");
 const resultElement = document.getElementById("result");
 
 const bloop = new Audio("GoodBloop.mp3");
-bloop.volume = 0.2;
+bloop.volume = 0.1;
 const winner = new Audio("fanfare.mp3");
-winner.volume = 0.2;
+winner.volume = 0.1;
 
 //Increments 0's scoree
 function incrementScorreO() {
@@ -153,5 +153,8 @@ resetButton.addEventListener("click", () => {
     cell.classList.remove("cross", "circle");
   });
   //Reset text
-  resultElement.innerText = ""
+  resultElement.innerText = "";
+  //Stop music
+  winner.pause();
+  winner.currentTime = 0;
 });

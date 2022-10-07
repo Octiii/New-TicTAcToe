@@ -61,6 +61,14 @@ body {
   color: white;
   text-align: center;
 }
+
+#player {
+  width: 200px;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
 /* Styles the text.*/
 #scorrecontainer {
   width: 200px;
