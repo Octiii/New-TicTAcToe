@@ -133,10 +133,12 @@ function endGame(winner) {
   //Check if game endedn in a tie 
   if (winner == 0) {
     resultElement.innerText = "Its a Tie!"
-  } else {
-    resultElement.innerText = `Player ${winner} wins!`
+  } else if (winner == 1) {
+    resultElement.innerText = "X Wins!"
+  } else if (winner == 2) {
+    resultElement.innerText = "O Wins!"
   }
-}
+};
 
 //Restart game
 const resetButton = document.getElementById("reset")
