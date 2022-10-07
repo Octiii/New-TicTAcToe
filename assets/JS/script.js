@@ -15,7 +15,7 @@ const cellDiv = document.querySelectorAll(".cell");
 
 //Pull result div
 const resultElement = document.getElementById("result");
-
+const whoGoesNow = document.getElementById("player");
 const bloop = new Audio("GoodBloop.mp3");
 bloop.volume = 0.1;
 const winner = new Audio("fanfare.mp3");
@@ -43,6 +43,7 @@ cellDiv.forEach((cell, index) => {
   cell.addEventListener("click", () => {
     bloop.play();
     placeMarker(index);
+    whosTurn();
   });
 });
 
@@ -140,6 +141,14 @@ function endGame(winner) {
   }
 };
 
+function whosTurn() {
+  if (player == 1) {
+    whoGoesNow.innerText = "X's Turn."
+  } else if (player == -1) {
+    whoGoesNow.innerText = "O's Turn."
+  }
+};
+
 //Restart game
 const resetButton = document.getElementById("reset")
 resetButton.addEventListener("click", () => {
@@ -159,4 +168,6 @@ resetButton.addEventListener("click", () => {
   //Stop music
   winner.pause();
   winner.currentTime = 0;
+  //Resets who goes now 
+  whoGoesNow.innerText = "X's Turn."
 });
