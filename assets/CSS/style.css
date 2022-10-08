@@ -112,11 +112,3 @@ button:hover {
   cursor: pointer;
   background-color: yellow;
 }
-/*Green!*/ 
-.green {
-  color: green !important; 
-}
-/*Red!*/ 
-.red {
-  color:red !important;
-}

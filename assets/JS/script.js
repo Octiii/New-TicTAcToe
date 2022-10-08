@@ -146,7 +146,7 @@ function endGame(winner) {
 function whosTurn() {
   if (player == 1) {
     whoGoesNow.innerText = "X's Turn."
-    whoGoesNow.style.color = 'red' 
+    whoGoesNow.style.color = 'red'
     //whoGoesNow.classList.add("red");
   } else if (player == -1) {
     whoGoesNow.innerText = "O's Turn."
@@ -175,6 +175,7 @@ resetButton.addEventListener("click", () => {
   winner.pause();
   winner.currentTime = 0;
   //Resets who goes now 
-  whoGoesNow.innerText = "X's Turn."
-  whoGoesNow.style.color = 'red'
+  whoGoesNow.innerText = "X is first!"
+  whoGoesNow.style.color = 'white'
+  whoGoesNow.style.transition = 'color 0.2s ease-out;'
 });
