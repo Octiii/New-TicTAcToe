@@ -22,7 +22,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 2px;
-  background-image:url(/images/grid.png);
+  background-image:url(/assets/images/grid.png);
   background-size: cover;
   border-radius: 3rem;
   box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0.5)
@@ -34,14 +34,14 @@ body {
 }
 /*Fits the image nicley into the squares.*/
 .circle {
-  background-image: url(/images/circle.png);
+  background-image: url(/assets/images/circle.png);
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
 }
 /* Fits the image nicley into the squares.*/
 .cross {
-  background-image: url(/images/cross.png);
+  background-image: url(/assets/images/cross.png);
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
